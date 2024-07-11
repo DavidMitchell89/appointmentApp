@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreen">
+   <children>
+      <TabPane prefHeight="668.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="customersTab" text="Customers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="351.0">
+                     <children>
+                        <VBox layoutX="6.0" layoutY="6.0">
+                           <children>
+                              <TableView fx:id="customerTbl" prefHeight="200.0">
+                                <columns>
+                                  <TableColumn fx:id="custIdCol" prefWidth="75.0" text="ID" />
+                                  <TableColumn fx:id="custNameCol" prefWidth="75.0" text="Name" />
+                                    <TableColumn fx:id="custAddCol" prefWidth="75.0" text="Address" />
+                                    <TableColumn fx:id="custPostCol" prefWidth="75.0" text="Postal Code" />
+                                    <TableColumn fx:id="custPhoneCol" prefWidth="75.0" text="Phone" />
+                                    <TableColumn fx:id="custStCol" prefWidth="75.0" text="State/Province" />
+                                    <TableColumn fx:id="custCountryCol" prefWidth="75.0" text="Country" />
+                                </columns>
+                              </TableView>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Button fx:id="newCustBtn" mnemonicParsing="false" onAction="#newCustClk" text="New Customer">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="updateCustBtn" mnemonicParsing="false" onAction="#updateCustClk" text="Update Customer">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <ComboBox fx:id="custCmb" onAction="#custSel" prefWidth="170.0" promptText="Select A Customer">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <Button fx:id="custDltBtn" mnemonicParsing="false" onAction="#custDltClk" text="Delete">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="custExitBtn" mnemonicParsing="false" onAction="#onExitClk" text="Exit">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="apptsTab" text="Appointments">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <TabPane prefHeight="392.0" tabClosingPolicy="UNAVAILABLE">
+                                      <tabs>
+                                        <Tab fx:id="allApptTab" text="All Appointments">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0">
+                                                   <children>
+                                                      <TableView fx:id="allApptTbl" layoutX="4.0" layoutY="14.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="allApptIdCol" minWidth="0.0" prefWidth="130.0" text="Appointment_ID" />
+                                                            <TableColumn fx:id="allApptTitleCol" minWidth="0.0" prefWidth="75.0" text="Title" />
+                                                            <TableColumn fx:id="allApptDescCol" minWidth="0.0" prefWidth="100.0" text="Description" />
+                                                            <TableColumn fx:id="allApptLocCol" minWidth="0.0" prefWidth="100.0" text="Location" />
+                                                            <TableColumn fx:id="allApptContactCol" minWidth="0.0" prefWidth="100.0" text="Contact" />
+                                                            <TableColumn fx:id="allApptTypeCol" minWidth="0.0" prefWidth="100.0" text="Type" />
+                                                            <TableColumn fx:id="allApptStartDateCol" minWidth="0.0" prefWidth="100.0" text="Start" />
+                                                            <TableColumn fx:id="allApptStartTimeCol" minWidth="0.0" prefWidth="100.0" text="Start Time" />
+                                                            <TableColumn fx:id="allApptEndDateCol" minWidth="0.0" prefWidth="100.0" text="End" />
+                                                            <TableColumn fx:id="allApptEndTimeCol" minWidth="0.0" prefWidth="100.0" text="End Time" />
+                                                            <TableColumn fx:id="allApptCustCol" minWidth="0.0" prefWidth="100.0" text="Customer ID" />
+                                                            <TableColumn fx:id="allApptUserCol" minWidth="0.0" prefWidth="100.0" text="User ID" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                          <Tab fx:id="currentMonthApptTab" text="Current Month">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TableView fx:id="currentMonthApptTbl">
+                                                         <columns>
+                                                            <TableColumn fx:id="monthApptIdCol" prefWidth="130.0" text="Appointment_ID" />
+                                                            <TableColumn fx:id="monthApptTitleCol" prefWidth="75.0" text="Title" />
+                                                            <TableColumn fx:id="monthApptDescCol" prefWidth="100.0" text="Description" />
+                                                            <TableColumn fx:id="monthApptLocCol" prefWidth="85.0" text="Location" />
+                                                            <TableColumn fx:id="monthApptContactCol" prefWidth="99.0" text="Contact" />
+                                                            <TableColumn fx:id="monthApptTypeCol" prefWidth="77.0" text="Type" />
+                                                            <TableColumn fx:id="monthApptStartCol" prefWidth="70.0" text="Start" />
+                                                            <TableColumn fx:id="monthApptStartTimeCol" minWidth="0.0" prefWidth="100.0" text="Start Time" />
+                                                            <TableColumn fx:id="monthApptEndCol" prefWidth="51.0" text="End" />
+                                                            <TableColumn fx:id="monthApptEndTimeCol" minWidth="0.0" prefWidth="100.0" text="End Time" />
+                                                            <TableColumn fx:id="monthApptCustCol" prefWidth="98.0" text="Customer ID" />
+                                                            <TableColumn fx:id="monthApptUserCol" prefWidth="68.0" text="User ID" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                        <Tab fx:id="currentWeekApptTab" text="Current Week">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TableView fx:id="currentWeekApptTbl">
+                                                         <columns>
+                                                            <TableColumn fx:id="WeekApptIdCol" prefWidth="150.0" text="Appointment_ID" />
+                                                            <TableColumn fx:id="WeekApptTitleCol" minWidth="0.0" prefWidth="75.0" text="Title" />
+                                                            <TableColumn fx:id="WeekApptDescCol" prefWidth="100.0" text="Description" />
+                                                            <TableColumn fx:id="WeekApptLocCol" minWidth="0.0" prefWidth="100.0" text="Location" />
+                                                            <TableColumn fx:id="WeekApptContactCol" prefWidth="70.0" text="Contact" />
+                                                            <TableColumn fx:id="WeekApptTypeCol" prefWidth="69.0" text="Type" />
+                                                            <TableColumn fx:id="WeekApptStartCol" prefWidth="97.0" text="Start" />
+                                                            <TableColumn fx:id="weekApptStartTimeCol" minWidth="0.0" prefWidth="100.0" text="Start Time" />
+                                                            <TableColumn fx:id="WeekApptEndCol" prefWidth="90.0" text="End" />
+                                                            <TableColumn fx:id="weekApptEndTimeCol" minWidth="0.0" prefWidth="100.0" text="End Time" />
+                                                            <TableColumn fx:id="WeekApptCustCol" prefWidth="109.0" text="Customer ID" />
+                                                            <TableColumn fx:id="WeekApptUserCol" prefWidth="92.0" text="User ID" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </children>
+                              </VBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Button fx:id="newAppt" mnemonicParsing="false" onAction="#newApptClk" text="New Appointment">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="updateAppt" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateApptClk" text="Update Appointment">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="contactApptGenBtn" mnemonicParsing="false" onAction="#contactApptGenClk" text="Contact Schedule">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="apptDltBtn" layoutX="72.0" layoutY="10.0" mnemonicParsing="false" onAction="#apptDltClk" text="Delete">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <HBox>
+                                             <children>
+                                                <Label text="Appointment Count: ">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label fx:id="apptCountLbl" text="Select Month and Type">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT">
+                                             <children>
+                                                <ComboBox fx:id="monthCmb" onAction="#apptMonthSelectCmb" prefWidth="132.0" promptText="Select Month">
+                                                   <HBox.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                                <ComboBox fx:id="typeCmb" onAction="#apptTypeSelectCmb" prefWidth="132.0" promptText="Select Type">
+                                                   <HBox.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                                <Button fx:id="apptCountGenBut" mnemonicParsing="false" onAction="#apptCountGenClk" text="Generate" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <HBox>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewAppointment">
+   <children>
+      <VBox>
+         <children>
+            <Label prefHeight="25.0" text="New Appointment">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </Label>
+            <HBox>
+               <children>
+                  <Label fx:id="apptLbl" prefHeight="25.0" prefWidth="113.0" text="Appointment ID">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="apptTxt" prefHeight="25.0" prefWidth="198.0" promptText="Auto Generated">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label fx:id="customerLbl" prefHeight="25.0" prefWidth="113.0" text="Customer ID">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="custCmb" prefHeight="25.0" prefWidth="198.0" promptText="Select Customer">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="154.0">
+               <children>
+                  <Label fx:id="userLbl" prefHeight="25.0" prefWidth="113.0" text="User ID">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="userCmb" prefHeight="25.0" prefWidth="198.0" promptText="Select User ID">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="144.0">
+               <children>
+                  <Label fx:id="titleLbl" prefHeight="25.0" prefWidth="113.0" text="Title">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="titleTxt" prefHeight="25.0" prefWidth="198.0">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label fx:id="DescriptionLbl" prefHeight="25.0" prefWidth="113.0" text="Description">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="descriptionTxt" prefHeight="25.0" prefWidth="198.0">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="110.0">
+               <children>
+                  <Label fx:id="locationLbl" prefHeight="25.0" prefWidth="113.0" text="Location">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="locationTxt" prefHeight="25.0" prefWidth="198.0">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="160.0">
+               <children>
+                  <Label fx:id="contactLbl" prefHeight="25.0" prefWidth="113.0" text="Contact">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="contactCmb" prefHeight="25.0" prefWidth="198.0" promptText="Select Contact">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="130.0">
+               <children>
+                  <Label fx:id="typeLbl" prefHeight="25.0" prefWidth="113.0" text="Type">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="typeCmb" prefHeight="25.0" prefWidth="198.0" promptText="Select type" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="142.0">
+               <children>
+                  <Label fx:id="startLbl" prefHeight="25.0" prefWidth="113.0" text="Start Date">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <DatePicker fx:id="startPkr" prefHeight="25.0" prefWidth="198.0" promptText="Start Date">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </DatePicker>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="106.0">
+               <children>
+                  <Label fx:id="startLbl" prefHeight="25.0" prefWidth="113.0" text="Start Time">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="startTxt" prefHeight="25.0" prefWidth="198.0" promptText="HH:MM">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="181.0">
+               <children>
+                  <Label fx:id="endLbl" prefHeight="25.0" prefWidth="113.0" text="End Date">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <DatePicker fx:id="endPkr" prefHeight="25.0" prefWidth="198.0" promptText="End Date">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </DatePicker>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="97.0">
+               <children>
+                  <Label fx:id="endLbl" prefHeight="25.0" prefWidth="113.0" text="End Time">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="endTxt" prefHeight="25.0" prefWidth="198.0" promptText="HH:MM">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveClk" prefHeight="25.0" text="Save">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#cancelClk" prefHeight="25.0" text="Cancel">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

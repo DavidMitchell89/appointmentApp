@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginScreen">
+    <children>
+        <VBox fillWidth="false">
+            <children>
+                <Label fx:id="titleLbl" text="Appointments">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
+                </Label>
+            <HBox>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+               <children>
+                      <Label fx:id="locationLbl" text="Location:">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                      </Label>
+                  <Label fx:id="localeLbl" layoutX="10.0" layoutY="10.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+                <HBox fillHeight="false">
+                    <children>
+                        <Label fx:id="idLbl" text="User ID:">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="idTxt">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox>
+                    <children>
+                        <Label fx:id="passwordLbl" text="Password:" />
+                        <TextField fx:id="passwordTxt" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox>
+                    <children>
+                        <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#loginClk" text="Login">
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#cancelClk" text="Cancel">
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
